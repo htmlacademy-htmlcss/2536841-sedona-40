@@ -2,7 +2,7 @@
 
 * Студент: [Кристина Алексанян](https://up.htmlacademy.ru/htmlcss/40/user/2536841).
 * Наставник: [Николай Колганов](https://htmlacademy.ru/profile/id794007).
-
+* Сайт: [Sedona](https://kuffintea.github.io/2536841-sedona-40/)
 ---
 
 _Не удаляйте и не обращайте внимание на файлы:_<br>
