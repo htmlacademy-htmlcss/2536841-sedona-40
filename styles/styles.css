@@ -1,3 +1,34 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+html {
+  display: flex;
+  justify-content: center;
+  background-color: #f2f2f2;
+}
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  width: 1200px;
+  color: #000;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgb(0 0 0 / 20%);
+  margin: 0;
+  min-height: 100vh;
+}
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -10,14 +41,251 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-.welcome {
-  /*background: #9a9ba6 url(./images/welcome-background.jpg) no-repeat;*/
-  background: url(../images/background-welcome.jpg) no-repeat;
+/*tools*/
+.button {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 0;
+  min-width: 160px;
+  cursor: pointer;
+}
+.button-big {
+  font-size: 20px;
+  line-height: 36px;
+  padding: 8px 50px;
+}
+.button:active {
+  color: rgb(255 255 255 / 30%);
+}
+.button[disabled] {
+  background-color: #e5e5e5;
+}
+.button-brown {
+  background-color: #756157;
+}
+.button-brown:is(:hover, :focus) {
+  background-color: #615048;
+}
+.button-blue {
+  background-color: #82b3d3;
+}
+.button-blue:is(:hover, :focus) {
+  background-color: #68a2ca;
+}
+.button-green {
+  background-color: #7db54f;
+}
+.button-green:is(:hover, :focus) {
+  background-color: #6c9e42;
+}
+.button-clear,
+.button-clear:focus{
+  color: #fff;
+  background-color: transparent;
+}
+.button-clear:focus{
+  box-shadow: inset 0 0 0 3px #83b3d3;
+}
+.button-clear:hover {
+  color: rgb(255 255 255 / 60%);
+}
+.button-clear[disabled] {
+  color: rgb(255 255 255 / 10%);
+  background-color: transparent;
+}
+/*header*/
+.main-header, .main-footer {
+  padding: 0 70px;
+}
+.main-header,
+.main-header .navigation-link:not(.button) {
+  color: #000;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.main-header,
+.navigation,
+.navigation-list,
+.navigation-user {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+.navigation-link:not(.navigation-link-active, .button),
+.navigation-link:not(.navigation-link-active) svg,
+.phone-link,
+.htmlacademy-link {
+  color: #000;
+}
+.navigation-link:not(.navigation-link-active, .button):is(:hover, :focus),
+.navigation-link:not(.navigation-link-active, .button):is(:hover, :focus) svg,
+.phone-link:is(:hover, :focus),
+.htmlacademy-link:is(:hover, :focus) {
+  color: #756157;
+}
+.navigation-link:not(.navigation-link-active, .button):active,
+.navigation-link:not(.navigation-link-active, .button):active svg,
+.phone-link:active,
+.htmlacademy-link:active {
+  color: rgb(117 97 87 / 30%);;
+}
+.catalog-link {
+  text-shadow: 0 4px 4px rgb(0 0 0 / 25%);
+}
+.benefits-list,
+.conditions-list,
+.social-list {
+  list-style: none;
+  padding: 0;
+}
+.benefits-heading,
+.conditions-heading {
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase
+}
+.benefits-description,
+.conditions-description,
+.hotel-info {
+  font-size: 18px;
+  line-height: 21px;
+}
+.benefits-item:is(:first-child, :last-child) {
+  color: #fff;
+  background-color: #82b3d3;
+}
+.benefits-item {
+  color: #333;
+  background-color: rgb(131 179 211 / 12%);
+}
+.benefits-item:nth-child(3),
+.conditions-item:not(:nth-child(2)) {
+  background-color: rgb(131 179 211 / 20%);
+}
+/*main*/
+.section-heading {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.newsletter .section-description {
+  color: #fff;
+}
+.section-description,
+.conditions-description,
+.main-inner .section-description  {
+  color: #333;
 }
 .main-index .newsletter {
-  /*background: #44666e url(./images/welcome-background.jpg) no-repeat;*/
-  background: url(../images/background-subscribe.jpg) no-repeat;
+  color: #fff;
+  background: #82b3d3 url(../images/background-subscribe.jpg) no-repeat;
+  background-size: 1200px auto;
+  padding: 96px 258px 104px 258px;
 }
+
+
+
+/*inner*/
 .inner-header-wrapper {
-  background: url(../images/background-wrapper.jpg) no-repeat;
+  color: #fff;
+  background: #82b3d3 url(../images/background-wrapper.jpg) no-repeat;
+  background-size: 1200px auto;
+  padding: 35px 70px;
+}
+.inner-header {
+  font-size: 60px;
+  line-height: 78px;
+}
+.breadcrumbs-item {
+  font-size: 16px;
+  line-height: 21px;
+}
+.filters legend {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+}
+.filters-item, .control-price  {
+  font-size: 18px;
+  line-height: 23px;
+}
+.control-price {
+  line-height: 24px;
+}
+.hotel-card {
+  padding: 20px;
+  border: 1px solid #f6f6f6;
+  border-radius: 4px;
+}
+.hotel-card .hotel-link {
+  color: #000;
+  text-decoration: none;
+}
+.hotel-title {
+  font-size: 24px;
+  line-height: 28px;
+}
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.pagination-item {
+  color: #fff;
+  background-color: #82b3d3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 4px;
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+}
+.pagination-item.active {
+  color: #000;
+  background-color: #f2f2f2;
+  cursor: default;
+}
+.pagination-link {
+  color: #fff;
+  font-size: 20px;
+  line-height: 36px;
+  text-decoration: none;
+}
+.pagination-link.pagination-current {
+  color: #000;
+}
+.pagination-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 60px;
+}
+/*footer*/
+.social-link {
+  color: #83b3d3;
+}
+.social-link:is(:hover, :focus) {
+  color: #68a2ca;
+}
+.social-link:active {
+  color: rgb(104 162 202 / 30%);
+}
+.phone-link {
+  color: #000;
+  font-size: 40px;
+  line-height: 40px;
+  display: inline-block;
+  height: 50px;
 }
