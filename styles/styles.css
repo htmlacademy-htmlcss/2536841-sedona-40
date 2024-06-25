@@ -398,8 +398,8 @@ body {
   position: absolute;
   content: '';
   top: 86px;
-  left: 85px;
-  right: 85px;
+  left: 50%;
+  transform: translateX(-50%);
   height: 2px;
   width: 60px;
   background-color: var(--color-basic-30);
