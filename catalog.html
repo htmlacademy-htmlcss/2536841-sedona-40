@@ -44,8 +44,8 @@
       </header>
       <main class="main-inner" data-test="main">
         <div class="inner-header-wrapper">
-          <h1 class="inner-header heading-1">Гостиницы Седоны</h1>
-          <ul class="breadcrumbs">
+          <h1 class="inner-header heading-1 margin-0">Гостиницы Седоны</h1>
+          <ul class="breadcrumbs margin-0">
             <li class="breadcrumbs-item text-small">
               <a class="breadcrumbs-link" href="index.html">
                 <img src="./images/svg/home.svg" width="13" height="15" alt="Вернуться на главную">
@@ -110,7 +110,7 @@
                   </li>
                 </ul>
               </fieldset>
-              <fieldset class="margin-0">
+              <fieldset class="price-filter margin-0">
                 <legend>Стоимость, ₽:</legend>
                 <div class="price-wrapper">
                   <div class="control-wrapper text-input">
@@ -128,11 +128,13 @@
                   <input type="range" class="max" min="0" max="11700" value="9000" />
                 </div>
               </fieldset>
-              <fieldset class="control-buttons margin-0">
-                <legend class="control-buttons-heading">Действия с формой:</legend>
-                <button class="button button-small button-bold button-uppercase button-second" type="submit">Применить</button>
-                <button class="button button-small button-bold button-uppercase button-clear" type="reset">Сбросить</button>
-              </fieldset>
+              <div class="control-buttons-wrapper">
+                <h3 class="control-buttons-heading margin-0">Действия с формой:</h3>
+                <div class="control-buttons">
+                  <button class="button button-small button-bold button-uppercase button-second" type="submit">Применить</button>
+                  <button class="button button-small button-bold button-uppercase button-clear" type="reset">Сбросить</button>
+                </div>
+              </div>
             </form>
           </section>
         </div>
@@ -210,7 +212,6 @@
               <span class="button button-uppercase button-small button-rating">Рейтинг: 5,0</span>
             </li>
           </ul>
-          <hr class="margin-0">
           <ul class="pagination margin-0">
             <li class="pagination-item active">
               <a class="pagination-link pagination-current">1</a>
@@ -236,10 +237,8 @@
           </ul>
         </section>
         <section class="newsletter" data-test="subscribe">
-          <div class="text-wrapper">
-            <h2 class="section-heading heading-2-uppercase margin-0">Подпишитесь на рассылку</h2>
-            <p class="section-description margin-0">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
-          </div>
+          <h2 class="section-heading heading-2-uppercase margin-0">Подпишитесь на рассылку</h2>
+          <p class="section-description margin-0">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
           <form action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="subscribe-email">Введите вашу почту</label>
             <input class="text-input" name="email" type="email" id="subscribe-email" placeholder="Ваш e-mail" required>
