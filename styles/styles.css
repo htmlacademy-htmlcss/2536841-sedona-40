@@ -12,26 +12,6 @@
   src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
-::-webkit-scrollbar {
-  width: 5px;
-  height: 11px;
-}
-::-webkit-scrollbar-button {
-  width: 5px;
-  height: 0;
-}
-::-webkit-scrollbar-corner {
-  background: transparent;
-}
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(to top right, var(--background-color-second), var(--button-color-second-dark));
-  border: 0 solid transparent;
-  border-radius: 50px;
-}
-::-webkit-scrollbar-track {
-  background: #091221;
-  border: 0 none #ffffff;
-}
 :root {
   /*colors*/
   --color-basic: #000000;
@@ -503,7 +483,6 @@ img {
   border-radius: 4px 0 0 4px;
   padding: 14px 20px;
   width: 100%;
-  outline: none;
 }
 :is(.newsletter, .modal) input::placeholder {
   color: var(--color-basic-60);
@@ -516,9 +495,6 @@ img {
 }
 :is(.newsletter, .modal) input:not([disabled]):is(:hover, :active, :focus) {
   background-color: var(--forms-color-action);
-}
-:is(.newsletter, .modal) input:focus, .newsletter input:focus + .button {
-  box-shadow: 0 0 0 3px var(--background-color-second);
 }
 .newsletter input + .button  {
   border-radius: 0 4px 4px 0;
@@ -568,7 +544,7 @@ img {
   gap: 44px;
   margin-left: auto;
 }
-.filters legend, .control-buttons-heading {
+.filters legend {
   font-size: var(--size-medium);
   line-height: var(--size-medium-3);
   font-weight: var(--text-bold);
@@ -585,10 +561,8 @@ img {
 .control-buttons {
   display: flex;
   flex-direction: column;
+  justify-content: end;
   gap: 32px;
-}
-.control-buttons-heading {
-  opacity: 0;
 }
 .control-buttons .button {
   padding: 8px 50px;
@@ -670,6 +644,7 @@ img {
   border-radius: 4px 0 0 4px;
   outline: none;
   width: 103px;
+  appearance: textfield;
 }
 .control-wrapper:last-child input {
   border-radius: 0 4px 4px 0;
@@ -692,6 +667,7 @@ img {
   position: relative;
   width: 100%;
   height: 4px;
+  margin-bottom: 8px;
   background: linear-gradient(to right, var(--color-default) 75%, var(--color-default-30) 75%);
 }
 .double-range-slider .range-btn {
@@ -771,19 +747,29 @@ img {
   grid-column: 1/-1;
   color: var(--color-basic);
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: color 0.2s ease;
+  overflow: hidden;
 }
 .hotel-link:is(:hover, :active) {
-  opacity: 0.6;
+  color: var(--button-color-basic);
 }
 .hotel-link:focus {
-  opacity: 0.4;
+  color: var(--button-color-basic-30);
+}
+.hotel-link img {
+  transition: transform 0.2s ease;
+}
+.hotel-link:is(:hover, :active, :focus) img {
+  transform: scale(1.1);
+}
+.hotel-link:focus img {
+  opacity: 0.7;
 }
 .hotel-image {
   display: block;
   height: 212px;
   width: 300px;
-  margin-bottom: 16px;
+  object-fit: cover;
 }
 .hotel-info {
   color: var(--color-second);
@@ -978,8 +964,11 @@ img {
   box-sizing: border-box;
   background-color: var(--forms-color-elements-2);
   -webkit-appearance: none;
-  appearance: none;
+  appearance: textfield;
   outline: none;
+}
+.modal input:focus {
+  box-shadow: 0 0 0 3px var(--background-color-second);
 }
 .modal input[type="number"]  {
   z-index: 1;
