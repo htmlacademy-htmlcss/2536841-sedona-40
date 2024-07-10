@@ -110,19 +110,21 @@
               </fieldset>
               <fieldset class="price-filter margin-0">
                 <legend>Стоимость, ₽:</legend>
-                <div class="price-wrapper">
-                  <div class="control-wrapper text-input">
+                <div class="price-wrapper text-input">
                     <input class="control-input text-input" id="min-price" type="number" name="price-from" value="0">
                     <label class="control-label" for="min-price">от</label>
-                  </div>
-                  <div class="control-wrapper text-input">
                     <input class="control-input text-input" id="max-price" type="number" name="price-to" value="9000">
                     <label class="control-label" for="max-price">до</label>
-                  </div>
                 </div>
                 <div class="double-range-slider">
-                  <button class="range-btn range-btn-min" type="button"></button>
-                  <button class="range-btn range-btn-max" type="button"></button>
+                  <div class="range-bar">
+                    <button class="range-btn range-btn-min" type="button">
+                      <span class="visually-hidden">Изменить миниальную цену</span>
+                    </button>
+                    <button class="range-btn range-btn-max" type="button">
+                      <span class="visually-hidden">Изменить максимальную цену</span>
+                    </button>
+                  </div>
                 </div>
               </fieldset>
               <div class="control-buttons">
@@ -188,7 +190,7 @@
                 <img class="hotel-image" src="./images/hotel/hotel-3.jpg" width="300" height="212" alt="Каньоны">
               </a>
               <a class="hotel-link" href="#" tabindex="-1">
-                <h3 class="hotel-title heading-3 margin-0">Villas at Poco Diablo</h3>
+                <h3 class="hotel-title heading-3 margin-0">Desert Quail Inn</h3>
               </a>
               <span class="hotel-info text-medium">Гостиница</span>
               <span class="hotel-info text-medium">От 2500 ₽</span>
@@ -202,7 +204,7 @@
                 <img class="hotel-image" src="./images/hotel/hotel-4.jpg" width="300" height="212" alt="Каньоны на фоне ночного неба">
               </a>
               <a class="hotel-link" href="#" tabindex="-1">
-                <h3 class="hotel-title heading-3 margin-0">Villas at Poco Diablo</h3>
+                <h3 class="hotel-title heading-3 margin-0">GreenTree Inn</h3>
               </a>
               <span class="hotel-info text-medium">Гостиница</span>
               <span class="hotel-info text-medium">От 1500 ₽</span>
