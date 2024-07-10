@@ -251,6 +251,9 @@ img {
   position: absolute;
   top: 0;
 }
+.logo-link:is(:hover, :active) {
+  opacity: 0.6;
+}
 .logo {
   width: 140px;
   display: block;
@@ -617,7 +620,7 @@ img {
 .container input:checked + .checkmark:after {
   display: block;
 }
-.control-input:not([disabled]):active + .checkmark {
+.control-input:not([disabled]):active + .checkmark, .double-range-slider .range-btn:active {
   box-shadow: 0 0 0 2px var(--button-color-second);
 }
 .control-input:not([disabled]):focus + .checkmark {
@@ -656,7 +659,7 @@ img {
 .control-wrapper input:is(:hover, :active, :focus) {
   background-color: var(--forms-color-action);
 }
-.control-wrapper input:focus {
+.control-wrapper input:focus, .double-range-slider .range-btn:focus {
   box-shadow: 0 0 0 3px var(--button-color-second);
 }
 .control-wrapper label {
@@ -680,9 +683,6 @@ img {
   cursor: pointer;
   top: -8px;
   outline: none;
-}
-.double-range-slider .range-btn:is(:active, :focus) {
-  box-shadow: 0 0 0 3px var(--button-color-second);
 }
 .range-btn-max {
   right: 61px;
