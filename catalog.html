@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="container">
-      <header class="main-header heading-4" data-test="header">
+      <header class="main-header heading-4">
         <a class="logo-link" href="index.html">
           <img class="logo" src="./images/svg/logo-sedona.svg" width="140" height="70" alt="Перейти на главную страницу">
         </a>
@@ -40,7 +40,7 @@
           <a class="navigation-link button button-basic button-bold button-uppercase" href="#">Хочу сюда!</a>
         </nav>
       </header>
-      <main class="main-inner" data-test="main">
+      <main class="main-inner">
         <div class="inner-header-wrapper">
           <h1 class="inner-header heading-1 margin-0">Гостиницы Седоны</h1>
           <ul class="breadcrumbs margin-0">
@@ -53,7 +53,7 @@
               <a class="breadcrumbs-link active" aria-current="page">Гостиницы</a>
             </li>
           </ul>
-          <section class="filters" data-test="filter">
+          <section class="filters">
             <h2 class="visually-hidden">Фильтры поиска гостиниц</h2>
             <form action="https://echo.htmlacademy.ru/" method="get">
               <fieldset class="margin-0">
@@ -134,7 +134,7 @@
             </form>
           </section>
         </div>
-        <section class="cards" data-test="catalog">
+        <section class="cards">
           <div class="sort-wrapper">
             <h2 class="section-heading heading-2-uppercase margin-0">Найдено гостиниц: 38</h2>
             <div class="sort-control">
@@ -238,7 +238,7 @@
             </li>
           </ul>
         </section>
-        <section class="newsletter newsletter-light" data-test="subscribe">
+        <section class="newsletter newsletter-light">
           <h2 class="section-heading heading-2-uppercase margin-0">Подпишитесь на рассылку</h2>
           <p class="section-description margin-0">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
           <form action="https://echo.htmlacademy.ru/" method="post">
@@ -248,7 +248,7 @@
           </form>
         </section>
       </main>
-      <footer class="main-footer" data-test="footer">
+      <footer class="main-footer">
         <h2 class="visually-hidden">О нас</h2>
         <ul class="social-list margin-0">
           <li class="social-item">
@@ -284,17 +284,17 @@
             <form action="https://echo.htmlacademy.ru/" method="post">
               <label class="full-control heading-4">
                 Дата заезда:
-                <div class="input-wrapper">
+                <span class="input-wrapper">
                   <input type="text" name="date-in" value="27 апреля 2020" placeholder="Укажите дату">
                   <span class="text-info text-small text-error">Мы не можем отправить вас в прошлое.</span>
-                </div>
+                </span>
               </label>
               <label class="full-control heading-4">
                 Дата выезда:
-                <div class="input-wrapper">
+                <span class="input-wrapper">
                   <input type="text" name="date-out" value="1 сентября 2023" placeholder="Укажите дату">
                   <span class="text-info text-small">На эти даты есть свободные номера. Пока есть.</span>
-                </div>
+                </span>
               </label>
               <div class="label-wrapper">
                 <label class="heading-4" for="adult-count">Взрослые:</label>
