@@ -255,7 +255,7 @@ img {
   display: block;
   width: 13px;
   height: 15px;
-  background: url("/images/svg/home.svg") no-repeat center;
+  background: url("../images/svg/home.svg") no-repeat center;
 }
 
 .button-clear[disabled] {
@@ -282,15 +282,15 @@ img {
 }
 
 .button-tile::before {
-  background-image: url("/images/svg/mode-tile.svg");
+  background-image: url("../images/svg/mode-tile.svg");
 }
 
 .button-card::before {
-  background-image: url("/images/svg/mode-card.svg");
+  background-image: url("../images/svg/mode-card.svg");
 }
 
 .button-list::before {
-  background-image: url("/images/svg/mode-list.svg");
+  background-image: url("../images/svg/mode-list.svg");
 }
 
 .button-mode:is(.active, :hover, :active) {
